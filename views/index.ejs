@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Lista książek</title>
+  </head>
+  <body>
+    <h1>Lista książek:</h1>
+    <ul>
+      <% books.forEach((book) => { %>
+        <li>
+          <h3><%= book.title %></h3>
+          <a href="<%= book.buyLink %>" target="_blank">
+            <img src="<%= book.img %>">
+          </a>
+          <p>Cena: <%= book.price %></p>
+        </li>
+      <% }); %>
+    </ul>
+  </body>
+</html>
